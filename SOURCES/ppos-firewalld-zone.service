@@ -1,0 +1,12 @@
+[Unit]
+Description=Set default PhotonPonyOS firewalld zone
+After=firewalld.service
+Requires=firewalld.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/ppos-firewalld-set-default-zone
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
