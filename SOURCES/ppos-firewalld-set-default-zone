@@ -1,7 +1,10 @@
 #!/usr/bin/bash
 
-# Change the default firewalld zone for all interfaces to 'ppos'.
+# Remove any modifications
+rm -f /etc/firewalld/zones/ppos.xml
+firewall-cmd --reload
 
+# Change the default firewalld zone for all interfaces to 'ppos'.
 firewall-cmd --set-default-zone=ppos
 for IFACE in $(ip -o link show | awk -F': ' '{if ($2 != "lo") print $2}')
 do

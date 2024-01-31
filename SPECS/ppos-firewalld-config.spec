@@ -1,6 +1,6 @@
 BuildArch:      noarch
 Name:           ppos-firewalld-config
-Version:        1.1.0
+Version:        1.2.0
 Release:        1
 License:        GPLv3
 Summary:        RPM containing the PhotonPonyOS firewalld configuration.
@@ -72,6 +72,9 @@ install -m 755 %{_sourcedir}/ppos-firewalld-set-default-zone $RPM_BUILD_ROOT/usr
 %attr(755, root, root) /usr/bin/ppos-firewalld-set-default-zone
 
 %changelog
+* Wed Jan 31 2024 Fabian Sauter <fabian.sauter+rpm@apsensing.com> - 1.2.0-1
+- Removing any modifications made to firewalld during boot
+
 * Thu Jan 19 2024 Fabian Sauter <fabian.sauter+rpm@apsensing.com> - 1.1.0-1
 - Added port 5001 for the gateway
 
