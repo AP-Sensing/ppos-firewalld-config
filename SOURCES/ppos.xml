@@ -8,6 +8,5 @@
   <service name="https"/>
   <port port="50051" protocol="tcp"/> <!-- gRPC Measurement Process -->
   <port port="50052" protocol="tcp"/> <!-- gRPC Management Process -->
-  <port port="5001" protocol="tcp"/> <!-- REST Gateway required for SmartVision -->
   <forward/>
 </zone>
